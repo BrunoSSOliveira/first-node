@@ -1,0 +1,16 @@
+{
+  "name": "first-node",
+  "version": "1.0.0",
+  "description": "Módulo de primeiros passos no curso de Node",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bruno",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
