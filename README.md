@@ -20,11 +20,9 @@ npm run dev
 ## routes
 
 ```javascript
-const rotas = {
-    '/': 'Curso de Node',
-    '/livros': 'Entrei na pag de livros',
-    '/autores': 'Listagem de autores',
-    '/editora': 'Pag de editora',
-    '/sobre': 'Info sobre o projeto'
-}
+GET http://localhost:3000/livros -> Bruscar Relação de livros
+GET http://localhost:3000/livros/{id} -> Bruscar livro específico
+POST http://localhost:3000/livros -> Criar um novo livro
+PUT http://localhost:3000/livros/{id} -> Editar alguma informação
+DELETE http://localhost:3000/livros/{id} -> Excluir um livro
 ```
