@@ -1,0 +1,8 @@
+version: "3.2"
+services:
+  db:
+    image: mongo:4.2
+    contaioner_name: db
+    restart: always
+    port:
+      - 27017:27017
