@@ -4,6 +4,12 @@ Minha oficialmente primeira api em node.js, baseado no curso ["Node.js: API Rest
 
 O curso utiliza uma versão mais antiga do MongoDB, por eu ter instalado uma versão mais atualizada, acabei encontrando um problema de incompatibilidade, porém, ao invés de fazer o downgrade para fazer a api conforme o curso, decidi continuar seguindo com a aula, mas convertendo para promises async/await.
 
+# O Projeto utiliza:
+1.	Express
+2.	mongoose
+3.  winston
+4.  dotenv
+
 ## Installation
 
 Por enquanto rodar o projeto não é nada complicado.

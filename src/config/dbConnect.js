@@ -1,6 +1,11 @@
+import dotenv from 'dotenv';
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb+srv://brunno:Shaka123@cluster0.uevo7or.mongodb.net/first-node");
+dotenv.config();
+
+const mongodbURL = process.env.MONGODB;
+
+mongoose.connect(mongodbURL);
 
 let db = mongoose.connection;
 
