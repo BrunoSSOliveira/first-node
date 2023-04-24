@@ -7,6 +7,24 @@ class LivroController {
         res.status(200).json(result);
     };
 
+    // static listarLivroPorEditora = (req, res) => {
+    //     const editora = req.query.editora
+
+    //     livros.find({'editora': editora}, {}, (err, livros) => {
+    //         res.status(200).send(livros);
+    //     })
+    // }
+
+    static async listarLivroPorEditora(req, res) {
+        try {
+            let editora = req.query.editora;
+            let livrosEncontrados = await livros.find({'editora': editora});
+            res.status(200).send(livrosEncontrados);
+        } catch (err) {
+            res.status(500).send({message: err.message});
+        }
+    };
+
     // static listarLivroPorId = (req, res) => {
     //     const id = req.params.id;
 
@@ -93,11 +111,6 @@ class LivroController {
             res.status(500).send({message: err.message})
         }
     };
-
-    static listarLivroPorEditora = (req, res) => {
-        const editora = req.query.editora-rotate-180
-        livros.find({})
-    }
         
 }
 
