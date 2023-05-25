@@ -1,0 +1,1 @@
+{"level":"error","message":{"response":"Cast to ObjectId failed for value \"63fd7a5e2bb8d\" (type string) at path \"_id\" for model \"livros\"","usecase":"listarLivroPorId"},"timestamp":"24/04/2023 17:20:50"}

@@ -1,10 +1,20 @@
 import livros from "../models/livro.js";
+import logger from '../config/logger.js';
 
 class LivroController {
 
     static async listarLivros(req, res) {
-        const result = await livros.find().populate('autor');
-        res.status(200).json(result);
+        try {
+            const result = await livros.find().populate('autor');
+            res.status(200).json(result);
+        } catch (err) {
+            logger.error({
+                usecase: "listarLivros",
+                response: err.message,
+                status: err.status
+            });
+            res.status(500).send({message: err.message});
+        }
     };
 
     // static listarLivroPorEditora = (req, res) => {
@@ -21,6 +31,11 @@ class LivroController {
             let livrosEncontrados = await livros.find({'editora': editora});
             res.status(200).send(livrosEncontrados);
         } catch (err) {
+            logger.error({
+                usecase: "listarLivroPorEditora",
+                response: err.message,
+                status: err.status
+            });
             res.status(500).send({message: err.message});
         }
     };
@@ -43,6 +58,11 @@ class LivroController {
             let doc = await livros.findById(id).populate('autor');
             res.status(200).send(doc);
         } catch (err) {
+            logger.error({
+                usecase: "listarLivroPorId",
+                response: err.message,
+                status: err.status
+            });
             res.status(400).send({message: `${err.message} - Id do livro não localizado.`})
         }
     }
@@ -64,6 +84,11 @@ class LivroController {
             await livro.save();
             res.status(201).send(livro.toJSON());
         } catch (err) {
+            logger.error({
+                usecase: "cadastrarLivro",
+                response: err.message,
+                status: err.status
+            });
             res.status(500).send({ message: `${err.message} - falha ao cadastrar livro.` });
         }
     };
@@ -86,6 +111,11 @@ class LivroController {
             await livros.findByIdAndUpdate(id, {$set: req.body});
             res.status(200).send({message: 'Livro atualizado com sucesso'})
         } catch (err) {
+            logger.error({
+                usecase: "atualizarLivro",
+                response: err.message,
+                status: err.status
+            });
             res.status(500).send({message: err.message})
         }
     };
@@ -108,6 +138,11 @@ class LivroController {
             await livros.findByIdAndDelete(id)
             res.status(200).send({message: 'Livro excluido com sucesso!'})
         } catch (err) {
+            logger.error({
+                usecase: "excluirLivro",
+                response: err.message,
+                status: err.status
+            });
             res.status(500).send({message: err.message})
         }
     };

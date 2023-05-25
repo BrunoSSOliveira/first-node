@@ -1,5 +1,8 @@
-import app from './src/app.js'
+import dotenv from 'dotenv';
+import app from './src/app.js';
 // const http = require("http")
+
+dotenv.config();
 const port = process.env.PORT || 3000;
 
 // const rotas = {
