@@ -1,7 +1,7 @@
 {
   "name": "first-node",
   "version": "1.0.0",
-  "description": "Módulo de primeiros passos no curso de Node",
+  "description": "Módulo de primeiros passos no curso de Node - convertido para typescript",
   "main": "index.js",
   "type": "module",
   "scripts": {
