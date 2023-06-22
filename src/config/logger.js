@@ -1,4 +1,5 @@
-import winston from "winston";
+// import winston from "winston";
+const winston = require("winston");
 
 const logger = winston.createLogger({
    format: winston.format.combine(

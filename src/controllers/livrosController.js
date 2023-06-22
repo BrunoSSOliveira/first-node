@@ -1,5 +1,7 @@
-import livros from "../models/livro.js";
-import logger from '../config/logger.js';
+// import livros from "../models/livro.js";
+// import logger from '../config/logger.js';
+const livros = require("../models/livro.js");
+const logger = require('../config/logger.js');
 
 class LivroController {
 
