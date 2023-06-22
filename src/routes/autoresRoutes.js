@@ -1,7 +1,7 @@
-// import express from "express";
-// import AutorController from "../controllers/autoresController.js";
-const express = require("express");
-const AutorController = require("../controllers/autoresController.js");
+import express from "express";
+import AutorController from "../controllers/autoresController.js";
+// const express = require("express");
+// const AutorController = require("../controllers/autoresController.js");
 
 const router = express.Router();
 

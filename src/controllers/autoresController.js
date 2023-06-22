@@ -1,7 +1,7 @@
-// import autores from "../models/autor.js";
-// import logger from '../config/logger.js';
-const autores = require("../models/autor.js");
-const logger = require('../config/logger.js');
+import autores from "../models/autor.js";
+import logger from '../config/logger.js';
+// const autores = require("../models/autor.js");
+// const logger = require('../config/logger.js');
 
 class AutorController {
 

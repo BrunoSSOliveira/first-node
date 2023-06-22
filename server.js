@@ -1,8 +1,5 @@
-// import dotenv from 'dotenv';
-// import app from './src/app.js';
-
-const dotenv = require('dotenv');
-const app = require('./src/app.js');
+import dotenv from 'dotenv';
+import app from './src/app.js';
 
 // const http = require("http")
 
